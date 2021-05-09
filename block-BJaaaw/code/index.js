@@ -18,7 +18,6 @@ let number = Number(prompt("enter the value"));
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
 
-// 3. Convert the above code using`?` terniary operator
 let num1 = Number(prompt ("enter first number"));
 let num2 = Number(prompt ("enter second number"));
 if(num1 > num2){
@@ -26,6 +25,10 @@ if(num1 > num2){
    }else{
     alert(`Max value= ${num2}`);
    }
+
+// 3. Convert the above code using`?` terniary operator
+
+num1 > num2 ? alert(`Max value= ${num1}`): alert(`Max value= ${num2}`);
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -56,7 +59,7 @@ housename == "lannister" ? alert(" A lannister always pays his debt") :alert(" A
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 
 
-let month =Number(prompt("emter the month"));
+let month =Number(prompt("enter the month"));
 switch(month){
     case 1:
       alert(" january= 31 days");
@@ -104,23 +107,24 @@ case 8:
   - `Salary <= 20000` tax is 10 %
   - `Salary <= 40000` tax is 20 %
   - `Salary > 50000` tax is 30 %
-
+*/
 
 let salery = Number(prompt("enter the salery"));
-switch(salery){
+switch(true){
     case  salery<=20000 :
-      alert(`in hand salery is ${20000-10%}`);
+         let tax =(salery*10) /100
+      alert(`in hand salery is ${salery-tax}`);
       break;
- 
-   case  salery<=40000 :
-     alert(`in hand salery is= ${40000-20%}`);
-      break;
- case Salery > 50000 :
-    alert(`in hand salery is= ${50000-30%}`);
-      break;
-
-    default:
-    alert("Enter a valid month");
+      case  salery<=40000 :
+          let tax =(salery*20) /100
+       alert(`in hand salery is ${salery-tax}`);
+       break;
+       case  salery > 50000 :
+          let tax =(salery*30) /100
+       alert(`in hand salery is ${salery-tax}`);
+       break;
+       default:
+       alert("Enter a valid amount");
 }
 
 //  if..else vs switch
@@ -149,14 +153,13 @@ else if(mark>30 && mark<50){
 alert("grade C");
 }
 
-else (mark>0 && mark <30)
- {
+else {
   alert("grade D");
 }
 
 //switch
 let mark =Number(prompt("enter a marks"));
-switch(mark){
+switch(true){
      case (mark>100):
           alert("marks cant be greater than 100");
           break;
@@ -169,7 +172,7 @@ switch(mark){
      case ( mark > 30 && mark < 50):
           alert("C"); 
           break; 
-     case ( mark > 0 && mark < 30):
+     default:
                alert("D"); 
                break;
      
@@ -204,8 +207,8 @@ else {
   alert("not a valid input");
 }
 //switch
-let weather =prompt("enter a marks");
-switch(weather){
+let weather =prompt("enter a weather condition");
+switch(true){
      case (weather == "sunny"):
           alert("Wear a T-shirt");
           break;
