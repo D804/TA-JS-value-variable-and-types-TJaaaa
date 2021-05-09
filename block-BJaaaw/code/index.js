@@ -7,9 +7,25 @@
   - `if` the number is odd print the message "number is odd"
 */
 
+
+let number = Number(prompt("enter the value"));
+ if(number % 2 === 0){
+     alert("even number");
+     }else{
+         alert("odd number");
+        }
+
+
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
 
 // 3. Convert the above code using`?` terniary operator
+let num1 = Number(prompt ("enter first number"));
+let num2 = Number(prompt ("enter second number"));
+if(num1 > num2){
+   alert(`Max value= ${num1}`);
+   }else{
+    alert(`Max value= ${num2}`);
+   }
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -18,12 +34,70 @@
   - `if` house name is "lannister" then print the message " A lannister always pays his debt"
   - `else` print the message " All men must die"
 */
+let housename =  prompt("enter the housename");
+if(housename == "stark"){
+alert( " Winter is coming");
+}
+else if(housename == "lannister"){
+alert(" A lannister always pays his debt")
+}
+else{
+alert(" All men must die");
+}
 
 // 5. Convert the above code using`?` terniary operator
+let housename =  prompt("enter the housename");
+housename == "stark" ? alert( " Winter is coming"):
+housename == "lannister" ? alert(" A lannister always pays his debt") :alert(" All men must die");
+
 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
+
+
+let month =Number(prompt("emter the month"));
+switch(month){
+    case 1:
+      alert(" january= 31 days");
+      break;
+ 
+ case 2:
+      alert(" feb= 28 days");
+      break;
+ case 3:
+      alert(" march= 31 days");
+      break;
+ case 4:
+      alert(" april= 30 days");
+      break;
+ case 5:
+      alert(" may= 31 days");
+      break;
+ case 6:
+      alert("jun= 30 days");
+      break;
+ case 7:
+      alert("july= 31 days");
+      break;
+case 8:
+      alert(" august= 31 day");
+      break;
+ case 9:
+      alert(" sep= 30 day");
+      break;
+ case 10:
+      alert(" oct= 31 days");
+      break;
+ case 11:
+      alert("  nov= 30 days");
+      break;
+ case 12:
+      alert(" dec= 31 days");
+      break;
+    default:
+    alert("Enter a valid month");
+}
 
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
@@ -31,7 +105,23 @@
   - `Salary <= 40000` tax is 20 %
   - `Salary > 50000` tax is 30 %
 
-*/
+
+let salery = Number(prompt("enter the salery"));
+switch(salery){
+    case  salery<=20000 :
+      alert(`in hand salery is ${20000-10%}`);
+      break;
+ 
+   case  salery<=40000 :
+     alert(`in hand salery is= ${40000-20%}`);
+      break;
+ case Salery > 50000 :
+    alert(`in hand salery is= ${50000-30%}`);
+      break;
+
+    default:
+    alert("Enter a valid month");
+}
 
 //  if..else vs switch
 
@@ -45,6 +135,47 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
+let mark =Number(prompt("enter a marks"));
+ if(mark>100){
+alert("mark cant be greater than 100");
+ }
+else if(mark>80 && mark<100){
+alert("grade A");
+}
+else if(mark>50 && mark <80){
+alert("grade A");
+}
+else if(mark>30 && mark<50){
+alert("grade C");
+}
+
+else (mark>0 && mark <30)
+ {
+  alert("grade D");
+}
+
+//switch
+let mark =Number(prompt("enter a marks"));
+switch(mark){
+     case (mark>100):
+          alert("marks cant be greater than 100");
+          break;
+     case ( mark>80 && mark < 100):
+          alert("A");
+          break;
+     case ( mark > 50 && mark < 80):
+         alert("B");
+         break;
+     case ( mark > 30 && mark < 50):
+          alert("C"); 
+          break; 
+     case ( mark > 0 && mark < 30):
+               alert("D"); 
+               break;
+     
+}
+
+
 
 /* 9. Weather app
 
@@ -55,3 +186,38 @@ Implement the condition give below using`if..else` and`switch` statement.
   - If`freezing` alert`Get your sweeter on`
   - Anything else should alert`Not a valid input`
 */
+let weather = prompt("enter a condition");
+ if(weather == "sunny"){
+alert("Wear a T-shirt");
+ }
+else if(weather == "rainy"){
+alert("Don't forget to take your raincoat");
+}
+else if(weather == "hot"){
+alert("Get a hanky");
+}
+else if(weather == "freezing"){
+alert("Get your sweeter on");
+}
+
+else {
+  alert("not a valid input");
+}
+//switch
+let weather =prompt("enter a marks");
+switch(weather){
+     case (weather == "sunny"):
+          alert("Wear a T-shirt");
+          break;
+     case ( weather == "rainy"):
+          alert("Don't forget to take your raincoat");
+          break;
+     case ( weather == "hot"):
+          alert("Get a hanky");
+         break;
+     case ( weather == "freezing"):
+          alert("Get your sweeter on");
+          break; 
+     default :
+     alert("not a valid input");
+}
