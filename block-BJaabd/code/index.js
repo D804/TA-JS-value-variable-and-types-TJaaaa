@@ -10,6 +10,17 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
 👇
 */
+let age = Number(prompt("Enter your age"));
+if(age>=12 && age<=55){
+  alert("You can participate in the marathon");
+}else if(age>=4 && age<=11){
+  alert(" You are too young to participate in the marathon");
+}else if(age<4 ){
+  alert(" Hey Kiddo! Can You Walk ?");
+
+}else{
+  alert(" You are too old to participate in the marthon");;
+}
 
 // Loops
 /*
@@ -20,6 +31,10 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
+let integer = +prompt("enter the number");
+
+
+
 // [Your code goes here]
 
 /*
@@ -47,6 +62,35 @@ Take a number value from user and alert the message if it matches the conditions
 */
 // [Your code goes here]
 
+let number =+prompt("enter the number");
+switch(true){
+  case(number ==1):
+  alert("number is equal to ONE");
+  break;
+  case(number ==2):
+  alert("number is equal to TWO");
+  break;
+  case(number ==3):
+  alert("number is equal to THREE");
+  break;
+  case(number ==4):
+  alert("number is equal to FOUR");
+  break;
+  case(number ==5):
+  alert("number is equal to FIVE");
+  break;
+  case(number ==6):
+  alert("number is equal to SIX");
+  break;
+  case(number ==7):
+  alert("number is equal to SEVEN");
+  break;
+  case(number ==8):
+  alert("number is equal to EIGHT");
+  break;
+  default:
+    alert("PLEASE TRY AGAIN")
+}
 /*
 🎖Using switch statement do the following
 
@@ -63,15 +107,56 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
+let number =+prompt("enter the number");
+switch(true){
+  case(number >90 &&number <=100):
+  alert("Grade is equal to AA");
+  break;
+  case(number >80 && number<=90):
+  alert("Grade is equal to AB");
+  break;
+  case(number >70 && number<=80):
+  alert("Grade is equal to BB");
+  break;
+  case(number >60 && number<=70):
+  alert("Grade is equal to BC");
+  break;
+  case(number >50 && number<=60):
+  alert("Grade is equal to CC");
+  break;
+  case(number >40 && number<=50):
+  alert("Grade is equal to CD");
+  break;
+  case(number >30 && number<=40):
+  alert("Grade is equal to DD");
+  break;
+  case(number <30):
+  alert("Grade is equal to DD");
+  break;
+  default:
+    alert("Enter a valid number");
+}
+
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
+let integer1 =+prompt("enter a first number");
+let integer2 =+prompt("enter a second number");
+switch(true){
+  case(integer1 >integer2):
+  alert(`largest among two ${integer1}`);
+  break;
+  default:
+    alert(`largest among two ${integer2}`);
+}
 
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+
+
 
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -84,5 +169,14 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
     * [ ] Mul
     * [ ] Div
 */
+let firstNumber = +prompt("Enter a first value");
+let secondNumber = +prompt("Enter second value");
+if(secondNumber >firstNumber){
+  alert(`Number Two is larger then Number one `)
+}else if(firstNumber >secondNumber){
+  alert(firstNumber+secondNumber);
+}else if(firstNumber >secondNumber){
+  alert(firstNumber+secondNumber);
+}
 
 // [Your code goes here]
