@@ -14,5 +14,13 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
+while(amount<200){
+    if(SPENDING_THRESHOLD <=200){
+        console.log(PHONE_PRICE+ACCESSORY_PRICE);
+        alert(`The total purchases amount is${$PHONE_PRICE+ACCESSORY_PRICE +TAX_RATE}`);
+    }
+    amount=amount++;
+}
+
 
 // ⛑ Answer of the above will `$334.76`.
