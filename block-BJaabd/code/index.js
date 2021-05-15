@@ -32,6 +32,14 @@ n = 7 => output: heeeeeeello
 👇
 */
 let integer = +prompt("enter the number");
+let firstLetter ="h";
+let lastLetter ="llo";
+let middleLetter ="";
+for(let i=0; i<integer; i++){
+  middleLetter+="e";
+
+}
+alert(firstLetter+middleLetter+lastLetter);
 
 
 
@@ -42,6 +50,12 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 👇
 */
 // [Your code goes here]
+let naturalNo =+prompt("Enter the number");
+let sum =0;
+for(let a=1;a<=naturalNo;a++){
+  sum+=a;
+}
+alert(sum);
 
 /* Switch Statement
 
@@ -107,30 +121,30 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
-let number =+prompt("enter the number");
+let marks =+prompt("enter the number");
 switch(true){
-  case(number >90 &&number <=100):
+  case(marks >90 &&marks <=100):
   alert("Grade is equal to AA");
   break;
-  case(number >80 && number<=90):
+  case(marks >80 && marks<=90):
   alert("Grade is equal to AB");
   break;
-  case(number >70 && number<=80):
+  case(marks >70 && marks<=80):
   alert("Grade is equal to BB");
   break;
-  case(number >60 && number<=70):
+  case(nmarks >60 && marks<=70):
   alert("Grade is equal to BC");
   break;
-  case(number >50 && number<=60):
+  case(marks>50 && marks<=60):
   alert("Grade is equal to CC");
   break;
-  case(number >40 && number<=50):
+  case(marks >40 && marks<=50):
   alert("Grade is equal to CD");
   break;
-  case(number >30 && number<=40):
+  case(marks >30 && marks<=40):
   alert("Grade is equal to DD");
   break;
-  case(number <30):
+  case(marks <30):
   alert("Grade is equal to DD");
   break;
   default:
@@ -155,6 +169,15 @@ switch(true){
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+const firstNumber =+prompt("Enter the first number");
+const secondNumber =+prompt("Enter the second number");
+const thirdNumber =+prompt("Enter the first number");
+let product = firstNumber*secondNumber*thirdNumber;
+if(product > 0){
+  alert("The value is positive");
+}else{
+  alert("The value is negative");
+}
 
 
 
@@ -171,12 +194,21 @@ switch(true){
 */
 let firstNumber = +prompt("Enter a first value");
 let secondNumber = +prompt("Enter second value");
-if(secondNumber >firstNumber){
-  alert(`Number Two is larger then Number one `)
-}else if(firstNumber >secondNumber){
-  alert(firstNumber+secondNumber);
-}else if(firstNumber >secondNumber){
-  alert(firstNumber+secondNumber);
+let operation = prompt("Enter the operation ")
+switch(operation){
+case( "Add"):
+  alert(`The sum of ${firstNumber}and sum of ${secondNumber} is ${firstNumber+secondNumber} `);
+break;
+  case("Sub"):
+  alert(`The substraction of ${firstNumber}and substraction of ${secondNumber} is ${firstNumber-secondNumber} `);
+break;
+  case("Division"):
+  alert(`The Division of ${firstNumber}and  Division of ${secondNumber} is ${firstNumber/secondNumber} `);
+break;
+case("Multiplication"):
+  alert(`The Multiplication of ${firstNumber}and Multiplication of ${secondNumber} is ${firstNumber*secondNumber} `);
+break;
+default:
+  alert("Enter a valid input");
 }
-
 // [Your code goes here]
