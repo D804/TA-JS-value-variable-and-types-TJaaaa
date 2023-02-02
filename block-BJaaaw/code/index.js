@@ -109,19 +109,19 @@ case 8:
   - `Salary > 50000` tax is 30 %
 */
 
-let salery = Number(prompt("enter the salery"));
+let salary = Number(prompt("enter the salary"));
 switch(true){
-    case  salery<=20000 :
+    case  salary<=20000 :
          let tax =(salery*10) /100
-      alert(`in hand salery is ${salery-tax}`);
+      alert(`in hand salery is ${salary-tax}`);
       break;
-      case  salery<=40000 :
-          let tax =(salery*20) /100
-       alert(`in hand salery is ${salery-tax}`);
+      case  salary<=40000 :
+          let tax1 =(salary*20) /100
+       alert(`in hand salary is ${salary-tax1}`);
        break;
-       case  salery > 50000 :
-          let tax =(salery*30) /100
-       alert(`in hand salery is ${salery-tax}`);
+       case  salary > 50000 :
+          let tax2 =(salary*30) /100
+       alert(`in hand salary is ${salary-tax2}`);
        break;
        default:
        alert("Enter a valid amount");
@@ -139,42 +139,47 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
-let mark =Number(prompt("enter a marks"));
- if(mark>100){
+let marks =Number(prompt("Enter yours  obtained marks"));
+ if(marks>100){
 alert("mark cant be greater than 100");
  }
-else if(mark>80 && mark<100){
-alert("grade A");
+else if(marks>=80 && marks<=100){
+alert("Grade A");
 }
-else if(mark>50 && mark <80){
-alert("grade A");
+else if(marks>=50 && marks <80){
+alert("Grade B");
 }
-else if(mark>30 && mark<50){
-alert("grade C");
+else if(marks>=30 && marks<50){
+alert("Grade C");
 }
 
-else {
-  alert("grade D");
+else if(marks>=0) {
+  alert("Grade D");
+}
+else{
+    alert(`Enter a valid number`);
 }
 
 //switch
-let mark =Number(prompt("enter a marks"));
+let mark =Number(prompt("Enter yours  obtained marks"));
 switch(true){
      case (mark>100):
           alert("marks cant be greater than 100");
           break;
-     case ( mark>80 && mark < 100):
-          alert("A");
+     case ( mark>=80 && mark <= 100):
+          alert("Grade A");
           break;
-     case ( mark > 50 && mark < 80):
-         alert("B");
+     case ( mark >= 50 && mark < 80):
+         alert("Grade B");
          break;
-     case ( mark > 30 && mark < 50):
-          alert("C"); 
+     case ( mark >= 30 && mark < 50):
+          alert("Grade C"); 
           break; 
+     case (mark>=0):
+               alert("Grade D"); 
+           break;
      default:
-               alert("D"); 
-               break;
+          alert(`Enter a valid number`)
      
 }
 
